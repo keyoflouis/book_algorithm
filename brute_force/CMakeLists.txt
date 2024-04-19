@@ -21,7 +21,7 @@ else()
     message("")
     add_subdirectory(implementation)
     target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/implemention)
-    target_link_libraries(${PROJECT_NAME} PUBLIC implemention_lib)
+    target_link_libraries(${PROJECT_NAME} PUBLIC implementation_lib)
 endif()
 
 
