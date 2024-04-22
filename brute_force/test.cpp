@@ -39,5 +39,8 @@ int main()
 	cout << "\nDepth First Traversal starting from vertex 'A':" << endl;
 	myGraph->DFS("A");
 
+	cout << "\nBreadth First Traversal starting from vertex 'A':" << endl;
+	myGraph->BFS("A");
+
 	return 0;
 }

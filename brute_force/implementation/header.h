@@ -3,6 +3,7 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <string>
+#include<queue>
 #include <set>
 using namespace std;
 
@@ -114,5 +115,28 @@ public:
 	{
 		unordered_map<string, bool> visited;
 		dfs(vertex, visited);
+	}
+
+	void BFS(string vertex)
+	{
+		unordered_map<string, bool> visited;
+		queue<string> q;
+
+		visited[vertex] = true;
+		q.push(vertex);
+
+		while (!q.empty())
+		{
+			string currentVertex = q.front();
+			cout << currentVertex << " ";
+			q.pop();
+			for (auto i : adjList[currentVertex]) {
+				if (visited.count(i)==0) {
+					q.push(i);
+					visited[i] = true;
+				}
+			}
+
+		}
 	}
 };
