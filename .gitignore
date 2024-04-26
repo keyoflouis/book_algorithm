@@ -1,5 +1,7 @@
 brute_force/build/
+brute_force/out/
 Decrease-and-Conquer/build/
+Decrease-and-Conquer/out/
 template/
 .vs/
 .vscode/

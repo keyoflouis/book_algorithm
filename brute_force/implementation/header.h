@@ -4,6 +4,7 @@
 #include <unordered_set>
 #include <string>
 #include<queue>
+#include<stack>
 #include <set>
 using namespace std;
 
@@ -36,7 +37,7 @@ private:
 	unordered_map<string, unordered_set<string>> adjList;
 
 	// recursion version
-	void dfs(string vertex, unordered_map<string, bool> &visited)
+	void dfs(string vertex, unordered_map<string, bool>& visited)
 	{
 
 		visited.insert(pair<string, bool>(vertex, true));
@@ -49,8 +50,8 @@ private:
 			}
 	}
 
-	// heap version
-	void DFS_heap();
+	
+
 
 public:
 	bool addVertex(string vertex)
@@ -131,12 +132,38 @@ public:
 			cout << currentVertex << " ";
 			q.pop();
 			for (auto i : adjList[currentVertex]) {
-				if (visited.count(i)==0) {
+				if (visited.count(i) == 0) {
 					q.push(i);
 					visited[i] = true;
 				}
 			}
 
+		}
+	}
+
+	// stack version
+	void DFS_stack(string vertex) {
+
+		unordered_set<string>visited;
+		visited.insert(vertex);
+
+
+		stack<string>stack;
+		stack.push(vertex);
+
+		while (!stack.empty())
+		{
+			string currentVertex = stack.top();
+			stack.pop();
+			cout << currentVertex <<" ";
+
+			for (auto i : adjList[currentVertex]) {
+				if (visited.count(i) == 0)
+				{
+					stack.push(i);
+					visited.insert(i);
+				}
+			}
 		}
 	}
 };

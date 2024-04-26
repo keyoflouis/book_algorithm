@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.22.1)
 
-project(brute_force)
-
+project(DecreaseandConquer)
+set(CMAKE_CXX_STANDARD 17)
 option(REVIEW "review or implementation" OFF)
 
 add_executable (${PROJECT_NAME}  ./test.cpp)
