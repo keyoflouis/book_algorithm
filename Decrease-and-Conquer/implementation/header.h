@@ -6,7 +6,7 @@
 #include<stack>
 using namespace std;
 
-
+void johnsonTrotter(int n);
 class Graph {
 private:
 	unordered_map<string, unordered_set<string>>adjList;
