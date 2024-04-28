@@ -1,6 +1,9 @@
-#include <iostream>
-#include <vector>
-using namespace std;
+#include"./header.h"
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////
 
 class Node {
 public:
@@ -71,4 +74,34 @@ void johnsonTrotter(int n) {
     }
     printSequence(sequantial);
 
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+////  BRGC
+
+void prepend(vector<string>& vec,char c){
+    for(string& str:vec){
+        str = c + str;
+    }
+}
+
+
+vector<string> BRGC(int n)
+{
+    if(n == 1){
+        return {"0", "1"};
+    }else{
+        vector<string> L1 = BRGC(n - 1);
+
+        vector<string> L2 (L1.rbegin(),L1.rend());
+
+        prepend(L1, '0');
+
+        prepend(L2, '1');
+
+        L1.insert(L1.end(), L2.begin(), L2.end());
+        return L1;
+    }
 }

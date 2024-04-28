@@ -4,9 +4,12 @@
 #include<string>
 #include<iostream>
 #include<stack>
+#include<vector>
 using namespace std;
 
 void johnsonTrotter(int n);
+vector<string> BRGC(int n);
+
 class Graph {
 private:
 	unordered_map<string, unordered_set<string>>adjList;
@@ -154,56 +157,3 @@ public:
 	}
 
 };
-/*
-class Graph {
-private:
-	// existing implementation...
-public:
-	// existing methods...
-
-	unordered_map<string, int> calcInDegrees() {
-		unordered_map<string, int> inDegrees;
-		for (auto [vertex, edges] : adjList) {
-			if (inDegrees.count(vertex) == 0) {
-				inDegrees[vertex] = 0;
-			}
-			for (auto edge : edges) {
-				inDegrees[edge]++;
-			}
-		}
-		return inDegrees;
-	}
-
-	vector<string> topologicalSort() {
-		vector<string> result;
-		unordered_map<string, int> inDegrees = calcInDegrees();
-
-		queue<string> zeroDegreeNodes;
-		for (auto [node, degree] : inDegrees) {
-			if (degree == 0) {
-				zeroDegreeNodes.push(node);
-			}
-		}
-
-		while (!zeroDegreeNodes.empty()) {
-			string node = zeroDegreeNodes.front();
-			zeroDegreeNodes.pop();
-
-			result.push_back(node);
-			for (auto neighbor : adjList[node]) {
-				inDegrees[neighbor]--;
-				if (inDegrees[neighbor] == 0) {
-					zeroDegreeNodes.push(neighbor);
-				}
-			}
-		}
-
-		if (result.size() != adjList.size()) {
-			throw runtime_error("Graph has at least one cycle, topological sort not possible");
-		}
-
-		return result;
-	}
-};
-
-*/

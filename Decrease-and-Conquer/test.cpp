@@ -39,8 +39,21 @@ int main() {
 	//return 0;
 
 
-	int n = 4; // Example for n = 4
-	johnsonTrotter(n);
+	//int n = 4; 
+	//johnsonTrotter(n);
+	//return 0;
+
+	int n;
+	std::cout << "Enter the number of bits for Gray codes: ";
+	std::cin >> n;
+
+	std::vector<std::string> grayCodes = BRGC(n);
+
+	std::cout << "The " << n << "-bit Gray codes are:\n";
+	for (const std::string& code : grayCodes) {
+		std::cout << code << std::endl;
+	}
+
 	return 0;
 
 }
