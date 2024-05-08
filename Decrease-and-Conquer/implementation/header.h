@@ -10,6 +10,8 @@ using namespace std;
 void johnsonTrotter(int n);
 vector<string> BRGC(int n);
 
+
+
 class Graph {
 private:
 	unordered_map<string, unordered_set<string>>adjList;
@@ -157,3 +159,27 @@ public:
 	}
 
 };
+
+class coin {
+public:
+	int value;
+	int index;
+
+	bool operator==(coin x) {
+		return x.value == this->value;
+	}
+	bool operator==(int index) {
+		return this->index == index;
+	}
+	bool operator>(coin x) {
+		return x.value < this->value;
+	}
+	bool operator<(coin x) {
+		return x.value > this->value;
+	}
+	int operator+(int i) {
+		return this->value + i;
+	}
+};
+int fakeIndex(vector<coin> coins);
+int mult(int n,int m)

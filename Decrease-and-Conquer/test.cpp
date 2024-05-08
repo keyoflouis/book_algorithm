@@ -1,5 +1,6 @@
 
 #include"header.h"
+
 int main() {
 	//Graph* myGraph = new Graph();
 
@@ -43,7 +44,7 @@ int main() {
 	//johnsonTrotter(n);
 	//return 0;
 
-	int n;
+	/*int n;
 	std::cout << "Enter the number of bits for Gray codes: ";
 	std::cin >> n;
 
@@ -54,6 +55,23 @@ int main() {
 		std::cout << code << std::endl;
 	}
 
-	return 0;
+	return 0;*/
 
+	// vector<coin> coins;
+	// for (int i = 0; i < 11; i++) {
+	// 	coin c;
+	// 	c.value = 1;
+	// 	c.index = i;
+	// 	coins.push_back(c);
+	// }
+	// coins[5].value = 0;
+
+	// int fakeCoinIndex = fakeIndex(coins);
+	// cout << "fake:" << fakeCoinIndex << endl;
+
+	// return 0;
+
+	// int n = 4;
+	// int m = 5;
+	// cout << "x = "<< n <<" y =" << m<<" x * y = "<<mult(n,m) << endl;
 }
