@@ -74,4 +74,10 @@ int main() {
 	// int n = 4;
 	// int m = 5;
 	// cout << "x = "<< n <<" y =" << m<<" x * y = "<<mult(n,m) << endl;
+
+	std::list<int> people = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	josephus(people, 3);
+	std::cout << "The last person standing is: " << people.front() << std::endl;
+	return 0;
+
 }

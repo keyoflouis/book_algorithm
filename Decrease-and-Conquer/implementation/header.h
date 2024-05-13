@@ -1,6 +1,7 @@
 
 #include<unordered_map>
 #include<unordered_set>
+#include<list>
 #include<string>
 #include<iostream>
 #include<stack>
@@ -182,4 +183,5 @@ public:
 	}
 };
 int fakeIndex(vector<coin> coins);
-int mult(int n,int m)
+int mult(int n, int m);
+void josephus(list<int>& people, int g = 2);
