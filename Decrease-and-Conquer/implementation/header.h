@@ -185,3 +185,4 @@ public:
 int fakeIndex(vector<coin> coins);
 int mult(int n, int m);
 void josephus(list<int>& people, int g = 2);
+int interpolationSearch(int arr[], int n, int x);

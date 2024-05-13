@@ -75,9 +75,19 @@ int main() {
 	// int m = 5;
 	// cout << "x = "<< n <<" y =" << m<<" x * y = "<<mult(n,m) << endl;
 
-	std::list<int> people = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-	josephus(people, 3);
-	std::cout << "The last person standing is: " << people.front() << std::endl;
-	return 0;
+	// std::list<int> people = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	// josephus(people, 3);
+	// std::cout << "The last person standing is: " << people.front() << std::endl;
+	// return 0;
 
+	int arr[] = { 10, 12, 13, 16, 18, 19, 20, 21, 22, 23, 24, 33, 35, 42, 47 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int x = 18;
+    int index = interpolationSearch(arr, n, x);
+
+    if (index != -1)
+        cout << "element " << x << " find index of " << index;
+    else
+        cout << "element " << x << " cant find";
+    return 0;
 }
