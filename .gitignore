@@ -1,9 +1,15 @@
 brute_force/build/
 brute_force/out/
+
 Decrease-and-Conquer/build/
 Decrease-and-Conquer/out/
+
 divide-and-conquer/build/
 divide-and-conquer/out/
+
+transform-and-conquer/build/
+transform-and-conquer/out/
+
 template/
 .vs/
 .vscode/
