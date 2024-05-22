@@ -1,10 +1,12 @@
 # 算法设计与分析第三版
-
+作者：Anany Levitin
 ----
 
-implementation里面放置了各章节算法的实现，
+implementation目录下放置了各章节算法的实现，
 
-review里面放置复习用的模板，
+review目录下放置复习用的模板，
+
+log写了对本章节算法的总结
 
 cmake最低要求版本 `3.22.1`
 
