@@ -10,6 +10,9 @@ divide-and-conquer/out/
 transform-and-conquer/build/
 transform-and-conquer/out/
 
+space-time-tradeoff/build/
+space-time-tradeoff/out/
+
 template/
 .vs/
 .vscode/
